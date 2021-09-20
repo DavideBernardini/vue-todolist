@@ -52,11 +52,14 @@ main {
 }
 .todos_list {
     list-style: none;
+    display: flex;
+    flex-direction: column;
 }
 .todos_list li {
     padding: 10px;
     border-bottom: 1px solid gray;
     display: flex;
+    font-size: 18px;
 }
 .todos_list li:hover {
     background-color: #fbfdfd;
@@ -64,4 +67,13 @@ main {
 .todos_list i {
     margin-left: auto;
     font-size: 18px;
+    color: #000;
+}
+.todos_list input {
+    margin-right: 10px;
+}
+.done {
+    text-decoration: line-through;
+    color: #00e165;
+    order: 1;
 }

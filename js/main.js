@@ -6,21 +6,42 @@ const app = new Vue({
             'name': 'boolean-logo'
         },
         todos: [
-            'Fare i compiti',
-            'Fare la spesa',
-            'Fare il bucato'
+            {
+                'task': 'Fare i compiti',
+                'checked': false
+            },
+            {
+                'task': 'Fare la spesa',
+                'checked': false
+            },
+            {
+                'task': 'Fare il bucato',
+                'checked': false
+            },
+            {
+                'task': 'Fare la doccia',
+                'checked': false
+            }
         ],
-        newTodo: ''
+        newTodo: '',
     },
     methods: {
         addTodo: function() {
             if (this.newTodo != '') {
-                this.todos.push(this.newTodo.charAt(0).toUpperCase() + this.newTodo.slice(1));
+                this.todos.push({
+                    'task': this.newTodo.charAt(0).toUpperCase() + this.newTodo.slice(1),
+                    'checked': false
+                });
                 this.newTodo = '';
             }
         },
         removeTodo: function(todoIndex) {
             this.todos.splice(todoIndex, 1)
+        },
+        done: function(checked, todoIndex) {
+            if (checked == true) {
+                return 'done';
+            }
         }
     }
 })
