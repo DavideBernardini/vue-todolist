@@ -1,0 +1,67 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* typo */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* common */
+.pointer {
+    cursor: pointer;
+}
+
+/* intestazione */
+header {
+    text-align: center;
+}
+.logo {
+    width: 300px;
+    padding: 15px 0 22px;
+}
+.add_todos input, .add_todos button {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(87, 87, 87);
+}
+.add_todos input {
+    width: 300px;
+    margin-right: 10px;
+}
+.add_todos input:focus-visible {
+    outline: none;
+}
+.add_todos button:hover {
+    background-color: #ebe8e8;
+}
+
+/* corpo */
+main {
+    margin-top: 40px;
+}
+.container_todos {
+    background-color: #f5f7f7;
+    border-radius: 10px;
+    width: 1240px;
+    padding: 26px;
+    margin: auto;
+}
+.todos_list {
+    list-style: none;
+}
+.todos_list li {
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    display: flex;
+}
+.todos_list li:hover {
+    background-color: #fbfdfd;
+}
+.todos_list i {
+    margin-left: auto;
+    font-size: 18px;
+}

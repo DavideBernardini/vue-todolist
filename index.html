@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- fontawsome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- /fontawsome -->
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <!-- /google font -->
+        <title>Vue To Do List</title>
+    </head>
+    <body>
+        <div id="root">
+            <!-- intestazione -->
+            <header>
+                <img class="logo" :src="image.url" :alt="image.name">
+                <div class="add_todos">
+                    <input type="text" placeholder="Nuovo todo">
+                    <button class="pointer">Aggiungi</button>
+                </div>
+            </header>
+            <!-- /intestazione -->
+            <!-- corpo app -->
+            <main>
+                <div class="container_todos">
+                    <ul class="todos_list">
+                        <li v-for="(todo, index) in todos" :key="index">{{todo}}<i class="fas fa-times"></i></li>
+                    </ul>
+                </div>
+            </main>
+            <!-- /corpo app -->
+        </div>
+
+
+        <!-- vue -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <!-- /vue -->
+        <!-- js -->
+        <script src="js/main.js"></script>
+        <!-- /js -->
+    </body>
+</html>
