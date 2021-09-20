@@ -21,7 +21,7 @@
             <header>
                 <img class="logo" :src="image.url" :alt="image.name">
                 <div class="add_todos">
-                    <input type="text" placeholder="Nuovo todo" v-model="newTodo">
+                    <input type="text" placeholder="Nuovo todo" v-model="newTodo" @keyup.enter="addTodo()">
                     <button class="pointer" @click="addTodo()">Aggiungi</button>
                 </div>
             </header>

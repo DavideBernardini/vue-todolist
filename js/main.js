@@ -9,7 +9,8 @@ const app = new Vue({
             'Fare i compiti',
             'Fare la spesa',
             'Fare il bucato'
-        ]
+        ],
+        newTodo: ''
     },
     methods: {
         addTodo: function() {
