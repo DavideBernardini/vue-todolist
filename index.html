@@ -21,17 +21,18 @@
             <header>
                 <img class="logo" :src="image.url" :alt="image.name">
                 <div class="add_todos">
-                    <input type="text" placeholder="Nuovo todo">
-                    <button class="pointer">Aggiungi</button>
+                    <input type="text" placeholder="Nuovo todo" v-model="newTodo">
+                    <button class="pointer" @click="addTodo()">Aggiungi</button>
                 </div>
             </header>
             <!-- /intestazione -->
             <!-- corpo app -->
             <main>
                 <div class="container_todos">
-                    <ul class="todos_list">
-                        <li v-for="(todo, index) in todos" :key="index">{{todo}}<i class="fas fa-times"></i></li>
+                    <ul class="todos_list" v-if="todos.length > 0">
+                        <li v-for="(todo, index) in todos" :key="index">{{todo}}<i class="fas fa-times pointer" @click="removeTodo(index)"></i></li>
                     </ul>
+                    <h2 v-else>Non ci sono todo!</h2>
                 </div>
             </main>
             <!-- /corpo app -->

@@ -12,6 +12,14 @@ const app = new Vue({
         ]
     },
     methods: {
-
+        addTodo: function() {
+            if (this.newTodo != '') {
+                this.todos.push(this.newTodo.charAt(0).toUpperCase() + this.newTodo.slice(1));
+                this.newTodo = '';
+            }
+        },
+        removeTodo: function(todoIndex) {
+            this.todos.splice(todoIndex, 1)
+        }
     }
 })
