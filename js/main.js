@@ -38,7 +38,7 @@ const app = new Vue({
         removeTodo: function(todoIndex) {
             this.todos.splice(todoIndex, 1)
         },
-        done: function(checked, todoIndex) {
+        done: function(checked) {
             if (checked == true) {
                 return 'done';
             }

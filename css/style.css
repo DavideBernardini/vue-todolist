@@ -73,7 +73,10 @@ main {
     margin-right: 10px;
 }
 .done {
-    text-decoration: line-through;
     color: #00e165;
     order: 1;
+    margin: 10px 0 -10px
+}
+.done span {
+    text-decoration: line-through;
 }
